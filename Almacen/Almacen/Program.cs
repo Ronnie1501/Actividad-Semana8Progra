@@ -19,7 +19,7 @@ namespace MyApp
             Console.WriteLine("Ingrese la cantidad de producto");
             int StockProducto = int.Parse(Console.ReadLine());
 
-            // Crea una nueva instancia de tu contexto de base de datos
+            // Crea una nueva instancia 
             using (var context = new AlmacenContext())
             {
                 // Crea una nueva instancia 
