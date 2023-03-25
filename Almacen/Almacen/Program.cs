@@ -1,36 +1,42 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using System;
+using System.Linq;
 using Almacen.Models;
-using Almacen.DAO;
-using System;
+using Microsoft.EntityFrameworkCore;
 
-CrudProducto CrudProducto = new CrudProducto();
-Producto Producto = new Producto();
-
-Console.WriteLine("Menu");
-Console.WriteLine("pulse 1 para insertar un nuevo producto");
-Console.WriteLine("pulse 0 para cancelar");
-var Menu = Convert.ToInt32(Console.ReadLine());
-
-switch (Menu)
+namespace MyApp
 {
-    case 1:
-        int bucle = 1;
-        while (bucle == 1)
+    class Program
+    {
+        static void Main(string[] args)
         {
             Console.WriteLine("Ingrese el nombre del producto:");
-            Producto.Nombre = Console.ReadLine();
-            Console.WriteLine("ingrese la descripcion del producto");
-            Producto.Descripción = Console.ReadLine();
-            Console.WriteLine("ingrese el precio del producto 00.00");
-            Producto.Precio = Convert.ToDecimal(Console.ReadLine());
-            Console.WriteLine("ingrese la cantidad en stock");
-            Producto.Stock = Convert.ToInt32(Console.ReadLine());
-            CrudProducto.AgregarProducto(Producto);
-            Console.WriteLine("Se agregó correctamente el producto");
-            Console.WriteLine("pulsa 1 para agregar un producto");
-            Console.WriteLine("pulsa 0 para salir");
-            bucle = Convert.ToInt32(Console.ReadLine());
-        }
-        break;
+            string nombreProducto = Console.ReadLine();
 
-}
+            Console.WriteLine("Ingrese el precio del producto:");
+            decimal precioProducto = decimal.Parse(Console.ReadLine());
+
+            Console.WriteLine("Ingrese la descripción del producto:");
+            string descripcionProducto = Console.ReadLine();
+
+            Console.WriteLine("Ingrese la cantidad de producto");
+            int StockProducto = int.Parse(Console.ReadLine());
+
+            // Crea una nueva instancia 
+            using (var context = new AlmacenContext())
+            {
+                // Crea una nueva instancia 
+                var nuevoProducto = new Producto
+                {
+                    Nombre = nombreProducto,
+                    Precio = precioProducto,
+                    Descripción = descripcionProducto,
+                    Stock = StockProducto,
+                };
+
+                // Agrega el nuevo objeto 
+                context.Productos.Add(nuevoProducto);
+
+                // Guarda los cambios en la base de datos
+                context.SaveChanges();
+
+                Console.WriteLine("El producto ha sido agregado a la base de datos.");
