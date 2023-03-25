@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\ronni\\Documents\\GitHub\\Actividad-Semana8Progra\\Almacen\\Almacen\\Almacen.csproj": {}
+    "E:\\ronni\\Documents\\GitHub\\Actividad-Semana9Progra\\Almacen\\Almacen\\Almacen.csproj": {}
   },
   "projects": {
-    "E:\\ronni\\Documents\\GitHub\\Actividad-Semana8Progra\\Almacen\\Almacen\\Almacen.csproj": {
+    "E:\\ronni\\Documents\\GitHub\\Actividad-Semana9Progra\\Almacen\\Almacen\\Almacen.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\ronni\\Documents\\GitHub\\Actividad-Semana8Progra\\Almacen\\Almacen\\Almacen.csproj",
+        "projectUniqueName": "E:\\ronni\\Documents\\GitHub\\Actividad-Semana9Progra\\Almacen\\Almacen\\Almacen.csproj",
         "projectName": "Almacen",
-        "projectPath": "E:\\ronni\\Documents\\GitHub\\Actividad-Semana8Progra\\Almacen\\Almacen\\Almacen.csproj",
+        "projectPath": "E:\\ronni\\Documents\\GitHub\\Actividad-Semana9Progra\\Almacen\\Almacen\\Almacen.csproj",
         "packagesPath": "C:\\Users\\ronni\\.nuget\\packages\\",
-        "outputPath": "E:\\ronni\\Documents\\GitHub\\Actividad-Semana8Progra\\Almacen\\Almacen\\obj\\",
+        "outputPath": "E:\\ronni\\Documents\\GitHub\\Actividad-Semana9Progra\\Almacen\\Almacen\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ronni\\AppData\\Roaming\\NuGet\\NuGet.Config",
